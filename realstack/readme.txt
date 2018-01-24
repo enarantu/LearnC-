@@ -16,7 +16,7 @@ README
     OS will deallocate it after you program finished executing, but during the execution everything except you can deallocate.
     If you allocate memory on stack, you don't have to deallocate it. When the variable run out of scope, it will be automatically
     deallocated.
-        for example, int a = 5; will allocated memory on stack and put 5 in it.
+        for example, int a = 5; will allocate memory on stack and put 5 in it.
         It will be deallocated automatically when it goes out of scope.
     "valgrind" checks if the program has a memory leak. Memory leak is a fancy
     way of saying that when your program finishes executing there is unallocated
