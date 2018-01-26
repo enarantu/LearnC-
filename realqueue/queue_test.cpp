@@ -38,6 +38,8 @@ void test_basic(){
 	q.push(2);
 	massert(q.top() == 2 , "top == 2; [2]");
 	massert(!q.empty(), "not empty ; [2]");
+	q.pop();
+	massert(q.empty(), "empty");
 	cout << "basic test PASS!!" << endl;
 }
 
