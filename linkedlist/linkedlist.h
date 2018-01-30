@@ -39,8 +39,6 @@ public:
 	//return true if empty
 	bool empty() const;
 
-	//return true if given integer is in a list
-	bool search(int x);
 private:
 
 	struct Node{
@@ -79,8 +77,27 @@ public:
 		//constructs iterator from a Node pointer
 		Iterator(Node * in_ptr);
 	};
+	//return an iterator pointing to first node with data = x, if it doesn't exist return past the end iterator
+	Iterator search(int x);
+	//inserts a node with data x after the node iterator is pointing to
+	//iterator is moved to the inserted node
+	void insert(Iterator &it, int x);
+	//removes a node iterator is pointing to
+	//iterator is moved to next node
+	void erase(Iterator &it);
 	//returns iterator pointing to front
 	Iterator begin() const;
 	//returns iterator pointing past the end
 	Iterator end() const;
 };
+
+void bubbleSort(Linkedlist::Iterator s, Linkedlist::Iterator e);
+
+void insertionSort(Linkedlist::Iterator s, Linkedlist::Iterator e);
+
+void selectionSort(Linkedlist::Iterator s, Linkedlist::Iterator e);
+
+void mergeSort(Linkedlist::Iterator s, Linkedlist::Iterator e);
+
+void quickSort(Linkedlist::Iterator s, Linkedlist::Iterator e);
+
